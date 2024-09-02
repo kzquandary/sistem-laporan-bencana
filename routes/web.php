@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BencanaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\KategoriBencanaController;
 use App\Http\Controllers\KecamatanController;
 use App\Http\Controllers\KotaController;
@@ -106,4 +107,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('list/{id_lapor}/korban', [PelaporanController::class, 'list']);
 
     Route::get('/profile', [UserController::class, 'index']);
+    Route::post('/upload', [FileUploadController::class, 'upload'])->name('upload');
 });

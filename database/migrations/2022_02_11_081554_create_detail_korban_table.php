@@ -22,6 +22,7 @@ class CreateDetailKorbanTable extends Migration
             $table->integer('umur');
             $table->string('gender');
             $table->string('kondisi');
+            $table->string('foto')->nullable();
             $table->timestamps();
         });
     }

@@ -17,6 +17,7 @@ class DetailKorban extends Model
         'umur',
         'gender',
         'kondisi',
+        'foto',
     ];
 
     public function pelaporan(){

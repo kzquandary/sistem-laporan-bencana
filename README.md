@@ -1,31 +1,19 @@
-# Halo semua! 
+# Laporan Bencana
 
-Project kali ini bernama **Laporan Bencana**.\
-**Laporan Bencana** adalah sistem informasi yang berfungsi untuk melaporkan terjadinya suatu bencana yang terjadi di suatu daerah.
+Laporan Bencana adalah sistem informasi yang berfungsi untuk melaporkan terjadinya suatu bencana yang terjadi di suatu daerah.
 
-Gambaran Sistem :
+## Gambaran Sistem
+
 - Register User
 - Login masing - masing aktor
 - Masyarakat dapat Create laporan bencana
+
 - Masyarakat dapat melihat history yang dilaporkan
-- Masyarakat dapat melihat daftar bencana yang terjadi (sudah diverifikasi petugas)
-- Petugas melihat laporan bencana dan bisa approve status bencana (laporan palsu atau bukan)
-- Petugas dapat memasukan daftar korban bencana
-- Petugas dapat melihat laporan terjadinya bencana dalam kurun waktu tertentu
-- Petugas dapat melihat laporan rekap terjadinya bencana pada setiap daerah
-- Admin dapat mengelola master user dan role
-- Admin dapat mengelola master kecamatan, kota, provinsi
-- Admin dapat mengelola master bencana dan kategori bencana (alam non alam)
 
-Aktor :
-- Admin
-- Petugas penanggulangan bencana
-- Masyarakat
+## Cara Install
 
-Proses pengembangan :
-- Laravel 8
-- DB MySql
-- Boostrap
-
-Dikerjakan Oleh :
-- Ari Lathifatul Chusna (saya)
+1. Clone repository ini
+2. Jalankan perintah `composer update`
+3. Jalankan perintah `php artisan migrate`
+4. Jalankan perintah `php artisan db:seed`
+5. Jalankan perintah `php artisan serve`

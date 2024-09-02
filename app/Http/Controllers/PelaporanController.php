@@ -61,21 +61,6 @@ class PelaporanController extends Controller
     }
 
     public function add_store(Request $request, $id){
-
-        // $lapor = Pelaporan::find($id);
-        // $jumlah = count($request->id_lapor);
-        //     for($i=0; $i< $jumlah; $i++){
-        //         DetailKorban::create([
-        //         'id_lapor'=> $request->id_lapor[$i],
-        //         'NIK'=>$request->NIK[$i],
-        //         'nama'=>$request->nama[$i],
-        //         'umur'=>$request->umur[$i],
-        //         'gender'=>$request->gender[$i],
-        //         'kondisi'=>$request->kondisi[$i]
-        //         ]);
-        //     }
-
-        
             foreach($request['NIK'] as $item => $value){
                 $data2 = array(
                     'id_lapor'=>$request['id_lapor'][$item],
@@ -84,11 +69,11 @@ class PelaporanController extends Controller
                     'umur'=> $request['umur'][$item],
                     'gender'=> $request['gender'][$item],
                     'kondisi'=> $request['kondisi'][$item],
+                    'foto'=> $request['foto'][$item],
                 );
                 DetailKorban::create($data2);
             }
             return redirect('/pelaporan');
-        
     }
 
     public function updateStatus($id_lapor){

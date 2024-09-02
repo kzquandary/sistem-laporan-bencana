@@ -24,6 +24,7 @@
                             <th scope="col">Umur</th>
                             <th scope="col">Jenis Kelamin</th>
                             <th scope="col">Kondisi</th>
+                            <th scope="col">Foto</th>
                             <th scope="col">Action</th>
                            
                           </tr>
@@ -38,7 +39,11 @@
                               <td>{{ $item->umur }}</td>
                               <td>{{ $item->gender }}</td>
                               <td>{{ $item->kondisi }}</td>
-                              
+                              @if($item->foto)
+                              <td><img src="{{ asset($item->foto) }}" alt="Foto" style="width: 100px; height: 100px;"></td>
+                              @else
+                              <td>Tidak ada foto</td>
+                              @endif
                     
                               <td>
                                 @if(auth()->user()->role == 'petugas')
