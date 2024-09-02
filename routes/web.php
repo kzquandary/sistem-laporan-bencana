@@ -25,7 +25,7 @@ use App\Models\Pelaporan;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
